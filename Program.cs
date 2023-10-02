@@ -1,12 +1,8 @@
-﻿class Program
+class Program
 {
     static void Main()
     {
-        List<Question> questions = new();
-        questions.Add(new Question("Vilken är huvudstaden i Frankrike?", "paris"));
-        questions.Add(new Question("Vilken brukar kallas för den röda planeten?", "mars"));
-        questions.Add(new Question("Vilken hundras är Lassie?", "collie", 3));
-        questions.Add(new Question("Vad heter er lärare i OOP?", "gus"));
+        List<Question> questions = JsonSerializer.Deserialize<List<Question>>(File.ReadAllText("questions.json"));
 
         int maxPoints = 0;
         foreach (Question item in questions)
