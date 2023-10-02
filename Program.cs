@@ -69,13 +69,3 @@
     }
 
 }
-
-// Välkommen till Quizet!
-// Första frågan: Vilken är huvudstaden i Frankrike?
-// Svar: paris
-// Rätt! 1 poäng!
-// Andra frågan: Vilken brukar kallas för den röda planeten?
-// Svar: jupiter
-// Fel! Rätt svar är Mars. 
-// ...
-// Nu är quizet klart, du fick 17 poäng. 
