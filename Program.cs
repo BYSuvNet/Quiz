@@ -4,16 +4,10 @@ class Program
 {
     static void Main()
     {
-        List<Question> questions = JsonSerializer.Deserialize<List<Question>>(File.ReadAllText("questions.json"));
-
-        int maxPoints = 0;
-        foreach (Question item in questions)
-        {
-            maxPoints += item.Points;
-        }
+        QuestionsManager questionsManager = new("questions.json");
 
         Console.WriteLine("Välkommen till Quizet!");
-        Console.WriteLine($"Det består av {questions.Count} frågor och maxpoängen är {maxPoints} poäng");
+        Console.WriteLine($"Det består av {questionsManager.NumberOfQuestions} frågor och maxpoängen är {questionsManager.MaxPoints} poäng");
 
         while (true)
         {
@@ -21,7 +15,7 @@ class Program
 
             int poäng = 0;
 
-            foreach (Question fråga in questions)
+            foreach (Question fråga in questionsManager.GetAllQuestions())
             {
                 int pointsForQuestion = AskQuestions(fråga);
                 if (pointsForQuestion == 0)
@@ -34,7 +28,7 @@ class Program
                 }
             }
 
-            Console.WriteLine($"Nu är quizet klart. Du fick {poäng} av max {maxPoints} poäng.");
+            Console.WriteLine($"Nu är quizet klart. Du fick {poäng} av max {questionsManager.MaxPoints} poäng.");
             Console.WriteLine($"Du missade {failedQuestions.Count} frågor.");
             Console.WriteLine("Vill du göra om quizet? (j/n)");
 
