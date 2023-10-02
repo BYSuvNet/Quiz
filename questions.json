@@ -1,0 +1,62 @@
+[
+    {
+        "Text": "Vilken är huvudstaden i Frankrike?",
+        "Answer": "paris",
+        "Points": 1
+    },
+    {
+        "Text": "Vilken brukar kallas för den röda planeten?",
+        "Answer": "mars",
+        "Points": 1
+    },
+    {
+        "Text": "Vilken hundras är Lassie?",
+        "Answer": "collie",
+        "Points": 3
+    },
+     {
+        "Text": "Vilken färg får du om du blandar blått och gult?",
+        "Answer": "grön",
+        "Points": 1
+    },
+    {
+        "Text": "Vilket grundämne har den kemiska symbolen O?",
+        "Answer": "syre",
+        "Points": 1
+    },
+    {
+        "Text": "Vad kallas den största planeten i vårt solsystem?",
+        "Answer": "jupiter",
+        "Points": 1
+    },
+    {
+        "Text": "Vilken flod rinner genom London?",
+        "Answer": "themsen",
+        "Points": 1
+    },
+    {
+        "Text": "Vad kallas Sveriges nationaldag?",
+        "Answer": "6 juni",
+        "Points": 1
+    },
+    {
+        "Text": "Vad är kvadratroten av 81?",
+        "Answer": "9",
+        "Points": 1
+    },
+    {
+        "Text": "Vilket år blev Sverige medlem i Europeiska unionen?",
+        "Answer": "1995",
+        "Points": 1
+    },
+    {
+        "Text": "Vilket är det snabbaste landdjuret?",
+        "Answer": "gepard",
+        "Points": 1
+    },
+    {
+        "Text": "Vad kallas den vetenskapliga studien av livet och levande organismer?",
+        "Answer": "biologi",
+        "Points": 1
+    }
+]

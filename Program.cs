@@ -1,3 +1,5 @@
+﻿using System.Text.Json;
+
 class Program
 {
     static void Main()
@@ -21,7 +23,7 @@ class Program
 
             foreach (Question fråga in questions)
             {
-                int pointsForQuestion = AskQuestions(fråga.Text, fråga.Answer, fråga.Points);
+                int pointsForQuestion = AskQuestions(fråga);
                 if (pointsForQuestion == 0)
                 {
                     failedQuestions.Add(fråga);
@@ -45,20 +47,18 @@ class Program
         Console.WriteLine("Tack för ditt quizzande!");
     }
 
-    static int AskQuestions(string fråga, string svaretPåFrågan, int poäng = 1)
+    static int AskQuestions(Question question)
     {
-        Console.WriteLine(fråga);
+        Console.WriteLine(question.Text);
 
-        string svar = Console.ReadLine().ToLower();
-
-        if (svar == svaretPåFrågan.ToLower())
+        if (question.CheckAnswer(Console.ReadLine()))
         {
             Console.WriteLine("Rätt!");
-            return poäng;
+            return question.Points;
         }
         else
         {
-            Console.WriteLine("Fel!");
+            Console.WriteLine("Fel! Rätt svar är: " + question.Answer);
         }
 
         return 0;
